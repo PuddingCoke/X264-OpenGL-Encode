@@ -20,7 +20,7 @@ int main()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
 
-	GLFWwindow* window = glfwCreateWindow(scrWidth, scrHeight, u8"Cuda Encode Test", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(scrWidth, scrHeight, u8"X264 Encode Test", nullptr, nullptr);
 
 	if (!window)
 	{
