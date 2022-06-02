@@ -19,8 +19,9 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
 
-	GLFWwindow* window = glfwCreateWindow(scrWidth, scrHeight, u8"X264 Encode Test", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(scrWidth, scrHeight, "", nullptr, nullptr);
 
 	if (!window)
 	{
@@ -35,9 +36,6 @@ int main()
 		std::cout << "failed to initialize GLAD\n";
 		return 0;
 	}
-
-	glfwSwapInterval(0);
-	glfwHideWindow(window);
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
